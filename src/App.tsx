@@ -11,6 +11,7 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import Badge from '@mui/material/Badge';
 import { Wrapper } from './App.styles';
 import Item from './Item/Item';
+import Cart from './Cart/Cart'
 //styles
 export type CartItemType = {
   id: number;
@@ -34,7 +35,10 @@ function App() {
   );
   console.log(data,isLoading,error)
 
-  const getTotalItems = (cartItems: CartItemType[])=>null
+  const getTotalItems = (cartItems: CartItemType[])=>{
+    return cartItems.reduce((ack:number, cartItems)=> ack+cartItems.amount,0)
+    
+  }
   const handleAddtoCart = (clickedItem: CartItemType) => null
   const handleRemoveFromCart = ()=> null
 
@@ -45,7 +49,7 @@ function App() {
     <div className="App">
     <Wrapper>
       <Drawer anchor='right' open={cartOpen} onClose={()=> setCartOpen(false)}>
-        Cart goes here 
+        <Cart cartItems={cartItems} addToCart={handleAddtoCart} removeFromCart={handleRemoveFromCart}></Cart>
       </Drawer>
         <StyledButton onClick={()=>setCartOpen(true)}>
             <Badge badgeContent={getTotalItems(cartItems)} color='error' />
