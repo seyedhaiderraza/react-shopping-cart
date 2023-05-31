@@ -12,6 +12,10 @@ import { CartItemType } from '../App'
     removeFromCart: (id: number)=> void
  }
 const Cart: React.FC<Props>= (props: Props) => {
+  const calculateTotal = (items: CartItemType[])=>
+  items.reduce((ack:number, item)=>{
+      return ack + item.amount*item.price
+  },0)
     const { cartItems, addToCart, removeFromCart} = props
   return (
     <Wrapper>
@@ -24,6 +28,7 @@ const Cart: React.FC<Props>= (props: Props) => {
         removeFromCart={removeFromCart}
         />
       ))}
+      <h2>Total: ${calculateTotal(cartItems).toFixed(2)}</h2>
     </Wrapper>
   )
 }
