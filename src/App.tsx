@@ -54,8 +54,21 @@ function App() {
 
       )
   }
-  const handleRemoveFromCart = ()=> null
-
+  const handleRemoveFromCart = (id: number) => {
+    setCartItems(prev => {
+      // Use the setCartItems function to update the cartItems state
+      return prev.map(item => {
+        // Map over each item in the previous cartItems array
+        if (item.id === id) {
+          // Check if the item's id matches the provided id
+          // If it does, reduce the quantity by 1
+          return { ...item, amount: item.amount - 1 };
+        }
+        // If the item's id doesn't match the provided id, return the item as is
+        return item;
+      });
+    });
+  }
   if(isLoading) return <LinearProgress/>
   if(error) return <p>Something went wrong</p>
 
