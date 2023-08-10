@@ -1,46 +1,67 @@
-# Getting Started with Create React App
+1. # Project summary
+----------------
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a Project built on React TypeScript using fakestore api to display products as listing on homepage with various information such as name, price, category and following features:
+a. homePage : display products using Products API
+b. AddtoCart functionality: 
+  b.1. dynamically update cart products count
+  b.2. dynamically calculate cart items cost value separately
+  b.3. add/remove products quantities.
 
-## Available Scripts
+2. # Project URL
+----------------
 
-In the project directory, you can run:
+https://react-shopping-cart-peach.vercel.app/
 
-### `npm start`
+4. # Technology Stack used
+-----------------
+HTML5/CSS3
+JavaScript: 📜 
+React: ⚛️
+TypeScript: 🌐 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+5. # Functional Requirements/Acceptance Criteria
+-----------------
+GIVEN: user visits the homepage
+WHEN: homepage loads
+THEN: user is able to see productlistings
+AND: product cards should be shown with image and data
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+GIVEN: user is on the homepage
+WHEN: user clicks on AddtoCart button
+THEN: Cart shos number quantity in red
+AND: Product and quantity is added to cart
 
-### `npm test`
+GIVEN: user clicks on Cart icon
+WHEN: cart sidebar opens
+THEN: cart shows product
+AND: product quanitity can be increased or dereased
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+6. # Test Data(if any)
+-----------------
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+N/A
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+7. # Screens
+------------------
+### HomePage
+![image](https://github.com/seyedhaiderraza/react-shopping-cart/assets/129282622/051cf296-b980-49c0-9ec9-9d000e15c690)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Cart
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![image](https://github.com/seyedhaiderraza/react-shopping-cart/assets/129282622/f800dc85-4aae-4e25-b26c-80870a32a8bd)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+
+
+
+
+
