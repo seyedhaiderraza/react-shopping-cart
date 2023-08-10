@@ -10,7 +10,13 @@ border-radius: 20px;
 height: 100%;
 
 button{
-border-radius: 0 0 20px 20px;
+ border-radius: 0 0 20px 20px;
+    background-color: #4d4dff;
+    color: white;
+
+    &:hover { /* Added :hover selector */
+      color: black; /* Change the font color to black on hover */
+    }
 }
 img{
     max-height: 250px;
